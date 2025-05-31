@@ -240,8 +240,11 @@ uvicorn delivery-agent-service.main:app --reload --port 8003
 
 ---
 
-# 🧪 Testing
+# Deployed URLs
+1. [User-Service]( https://kraftbase-assignment.onrender.com/)
+2. [Restaurant-Service](https://restaurant-service-kraftbase.onrender.com/)
+3. [Delivery-Agent-Service](https://delivery-agent-service-kraftbase.onrender.com/)
 
-Use tools like **Postman** or **cURL** to test the individual endpoints across services.
-
+# Postman APIs
+I have attached the postman requests collection json in the Github Repo. Kindly import it in Postman and run the APIs.
 ---

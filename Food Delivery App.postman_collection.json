@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "b7b3a4af-9fbf-432d-9455-18c528ec4bb2",
+		"name": "Food Delivery App",
+		"description": "This is the Postman Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "45229782"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Vighnesh\",\n    \"email\": \"vighnesh.vats@gmail.com\"\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://kraftbase-assignment.onrender.com/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Agent Registration",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Vasu\",\n    \"status\": false\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://delivery-agent-service-kraftbase.onrender.com/registerAgent"
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Restaurant",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Restaurant 2\",\n    \"is_online\": false,\n    \"userId\": 1\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://restaurant-service-kraftbase.onrender.com/addRestaurant"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateRestaurantStatus",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": true,\n    \"restaurantId\": 2,\n    \"userId\": 1\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://restaurant-service-kraftbase.onrender.com/updateStatus"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAgentStatus",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": true,\n    \"agent_id\": 1\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://delivery-agent-service-kraftbase.onrender.com/updateStatus/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Menu Item",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Plain Dosa\",\n    \"price\": 100,\n    \"userId\": 1,\n    \"restaurantId\": 1\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://restaurant-service-kraftbase.onrender.com/addItemsinMenu"
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Menu Item",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Masala Dosa\",\n    \"price\": 100,\n    \"userId\": 1,\n    \"restaurantId\": 2\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://restaurant-service-kraftbase.onrender.com/updateMenuItem/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"restaurant_id\": 1,\n    \"food\": [1,3]\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://kraftbase-assignment.onrender.com/order"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order Status",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"order_id\": 1,\n    \"restaurant_id\": 1,\n    \"status\": \"accepted\"\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://restaurant-service-kraftbase.onrender.com/updateOrder"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order Status - Delivery Agent",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"order_id\": 1,\n    \"agent_id\": 1,\n    \"status\": \"delivered\"\n}\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://delivery-agent-service-kraftbase.onrender.com/updateorderStatus"
+			},
+			"response": []
+		},
+		{
+			"name": "AllRestaurants",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://kraftbase-assignment.onrender.com/getAllMenu"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllOrders - Delivery Agent",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8002/getallorders/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "getOrders for Restaurant",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://restaurant-service-kraftbase.onrender.com/getAllOrders/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Display Order for Users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://kraftbase-assignment.onrender.com/getUsersOrders/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Display Agent Rating",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://delivery-agent-service-kraftbase.onrender.com/getmyratings/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Display Restaurant Rating",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://restaurant-service-kraftbase.onrender.com/getRestaurantRatings/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Rate Order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"order_id\": 1,\r\n    \"food_rating\": 5,\r\n    \"delivery_agent_rating\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://kraftbase-assignment.onrender.com/rate"
+			},
+			"response": []
+		}
+	]
+}

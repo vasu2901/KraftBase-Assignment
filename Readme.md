@@ -247,4 +247,27 @@ uvicorn delivery-agent-service.main:app --reload --port 8003
 
 # Postman APIs
 I have attached the postman requests collection json in the Github Repo. Kindly import it in Postman and run the APIs.
+
+# Docker
+I have created a Dockerfile for User-Service.
+For running the User-Service server
+```bash
+docker build -t user-service .
+docker run -p 8000:8000 user-service
+```
+
+For running the Restaurant-Service Server
+```bash
+docker build -t restaurant-service .
+docker run -p 8001:8000 restaurant-service uvicorn restaurant-service.main:app --host 0.0.0.0 --port 8000
+```
+
+For running the Delivery-Agent-Service Server 
+```bash
+docker build -t delivery-agent-service .
+docker run -p 8002:8000 delivery-agent-service uvicorn delivery-agent-service.main:app --host 0.0.0.0 --port 8000
+```
+
+
+For creating Docker Images and Running Docker Container, please ensure you have Docker installed in your system and Docker Desktop instance is running.
 ---
